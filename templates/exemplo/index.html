@@ -1,0 +1,46 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>Django Model Form + Bootstrap + Crispy</title>
+</head>
+
+<body>
+  
+  <div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+      <div class="col-sm-12 col-xl-6">
+        <div class="bg-secondary rounded h-100 p-4"> 
+          <h6 class="mb-4">AutoForm with crispy</h6>              
+            <form class="form-group col-md-6" method="post" action=".">
+              {% csrf_token %}
+              {{ form|crispy }}
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+    </div>
+  </div>
+
+  <div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+      <div class="col-sm-12 col-xl-6">
+        <h6 class="mb-4">Users</h6>  
+          <ul>
+            {% for pessoa in pessoas %}
+            <li>{{ pessoa.id}} - <a href={% url 'update_pessoa' pessoa_id=pessoa.id %}>{{ pessoa }}</a></li>
+            {% empty %}
+            <li>Nenhum registro encontrado</li>
+            {% endfor %}
+          </ul>
+    </div> 
+  </div>
+
+</body>
