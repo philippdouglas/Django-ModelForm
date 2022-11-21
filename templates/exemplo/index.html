@@ -20,7 +20,7 @@
     <div class="row g-4">
       <div class="col-sm-12 col-xl-6">
         <div class="bg-secondary rounded h-100 p-4"> 
-          <h6 class="mb-4">AutoForm with crispy</h6>              
+          <h6 class="mb-4">Cadastro</h6>              
             <form class="form-group col-md-6" method="post" action=".">
               {% csrf_token %}
               {{ form|crispy }}
@@ -32,7 +32,7 @@
   <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
       <div class="col-sm-12 col-xl-6">
-        <h6 class="mb-4">Users</h6>  
+        <h6 class="mb-4">Usuários Cadastrados</h6>  
           <ul>
             {% for pessoa in pessoas %}
             <li>{{ pessoa.id}} - <a href={% url 'update_pessoa' pessoa_id=pessoa.id %}>{{ pessoa }}</a></li>
