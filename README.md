@@ -1,3 +1,3 @@
 # Django ModelForm
 
-Formulário automático no Django estilizando com Bootstrap usando o crispy-forms
+Formulário automático no Django estilizado com Bootstrap usando o crispy-forms
