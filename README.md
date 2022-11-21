@@ -15,5 +15,5 @@ Formulário automático no Django estilizado com Bootstrap usando o crispy-forms
 
 # Iniciar o Projeto
 
->> python manage.py migrate
->> python manage.py runserver
+* python manage.py migrate
+* python manage.py runserver
