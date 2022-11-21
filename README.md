@@ -17,3 +17,10 @@ Formulário automático no Django estilizado com Bootstrap usando o crispy-forms
 
 * python manage.py migrate
 * python manage.py runserver
+
+```bash
+
+$ python manage.py migrate
+$ python manage.py runserver
+
+```
